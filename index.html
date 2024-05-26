@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ticket</title>
+  </head>
+  <body dir="rtl" class="body">
+    <div class="box-img">
+      <img src="./picture/Ticket.jpg" alt="ticket" class="img" onclick="refresh()" />
+      <div id="result"></div>
+    </div>
+
+    <div class="formBox">
+      <h2>فرم بلیط</h2>
+      <form class="form" id="form">
+        <div class="section">
+          <div class="boxInput">
+            <label for="name">اسم المسافر:</label>
+            <input class="input" type="text" id="name" />
+          </div>
+          <div class="boxInput">
+            <label for="passportNumber">رقم جواز السفر:</label>
+            <input class="input" type="number" id="PassportNumber" />
+          </div>
+          <div class="boxInput">
+            <label for="country">الجنسیه:</label>
+            <input class="input" type="text" id="country" />
+          </div>
+          <div class="boxInput">
+            <label for="dateTicket">تاریخ الاصدار:</label>
+            <input class="input" type="text" id="dateTicket" />
+          </div>
+        </div>
+        <!-- ----- -->
+        <div class="section">
+          <div class="boxInput">
+            <label for="from">من:</label>
+            <input class="input" type="text" id="from" />
+          </div>
+          <div class="boxInput">
+            <label for="to">الی:</label>
+            <input class="input" type="text" id="to" />
+          </div>
+          <div class="boxInput">
+            <label for="priceTicket">قیمه التذکره:</label>
+            <input class="input" type="number" id="priceTicket" />
+          </div>
+        </div>
+        <!-- --------------- -->
+        <div class="section">
+          <div class="boxInput">
+            <label for="numberFly">رقم الرحله:</label>
+            <input class="input" type="number" id="numberFly" />
+          </div>
+          <div class="boxInput">
+            <label for="numberChair">رقم المقعد:</label>
+            <input class="input" type="number" id="numberChair" />
+          </div>
+          <div class="boxInput">
+            <label for="dateTravel"> تاریخ السفر:</label>
+            <input class="input" type="text" id="dateTravel" />
+          </div>
+          <div class="boxInput">
+            <label for="dateExist">ساعه الانطلاق:</label>
+            <input class="input" type="text" id="dateExist" />
+          </div>
+        </div>
+
+        <!-- -------- -->
+        <div class="section">
+          <div class="boxInput">
+            <label for="numberTicket">رقم التذکره:</label>
+            <input class="input" type="number" id="numberTicket" />
+          </div>
+        </div>
+        <button class="button" type="submit">PRINT</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

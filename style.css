@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-img {
+  width: 24cm;
+  height: 7cm;
+  position: relative;
+}
+.formBox {
+  background-color: rgb(187, 187, 187);
+  width: 700px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: "10px";
+  padding: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  border-bottom: 1px solid white;
+  padding-block: 10px;
+}
+
+.boxInput {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.button {
+  padding: 10px;
+  background-color: green;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* -------------print-------------- */
+
+.printSectionOne {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: red; */
+  gap: "2px";
+  position: absolute;
+  top: 75px;
+  right: 290px;
+  height: 120px;
+  width: 200px;
+}
+.printSectionTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: blue; */
+  position: absolute;
+  top: 75px;
+  right: 590px;
+  height: 55px;
+  width: 100px;
+}
+.printSectionThree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background-color: yellow; */
+  position: absolute;
+  top: 168px;
+  right: 550px;
+  height: 30px;
+  width: 150px;
+}
+.printSectionFour {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: purple; */
+  position: absolute;
+  bottom: 15px;
+  right: 140px;
+  height: 30px;
+  width: 580px;
+}
+.printSectionFive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: green; */
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 220px;
+  width: 150px;
+}
+.splitBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+}
+.img {
+  display: initial;
+  cursor: pointer;
+}
+@media print {
+  @page {
+    size: 240mm 90mm;
+  }
+  .img {
+    opacity: 0;
+  }
+  .printSectionFive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* background-color: green; */
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 220px;
+    width: 150px;
+  }
+}
