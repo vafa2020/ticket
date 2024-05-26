@@ -13,59 +13,43 @@ const dateTravelDom = document.querySelector("#dateTravel");
 const dateExistDom = document.querySelector("#dateExist");
 const numberTicketDom = document.querySelector("#numberTicket");
 const resultDom = document.querySelector("#result");
-
+const e2a = (s) => s?.replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
 function refresh() {
   window.location.reload();
 }
 formDom.addEventListener("submit", (e) => {
   e.preventDefault();
   const wrapper = document.createElement("div");
-
-  const formValue = {
-    name: nameDom.value,
-    PassportNumber: PassportNumberDom.value,
-    country: countryDom.value,
-    dateTicket: dateTicketDom.value,
-    from: fromDom.value,
-    to: toDom.value,
-    priceTicket: priceTicketDom.value,
-    numberFly: numberFlyDom.value,
-    numberChair: numberChairDom.value,
-    dateTravel: dateTravelDom.value,
-    dateExist: dateExistDom.value,
-    numberTicket: numberTicketDom.value,
-  };
   const print = ` <div class="printSectionOne">
-  <p>${nameDom.value}</p>
-  <p>${PassportNumberDom.value}</p>
-  <p>${countryDom.value}</p>
-  <p>${dateTicketDom.value}</p>
+  <p>${e2a(`${nameDom.value}`)}</p>
+  <p>${e2a(`${PassportNumberDom.value}`)}</p>
+  <p>${e2a(`${countryDom.value}`)}</p>
+  <p>${e2a(`${dateTicketDom.value}`)}</p>
 </div>
 <div class="printSectionTwo">
-  <p>${fromDom.value}</p>
-  <p>${toDom.value}</p>
+  <p>${e2a(`${fromDom.value}`)}</p>
+  <p>${e2a(`${toDom.value}`)}</p>
 </div>
 <div class="printSectionThree">
-  <p>${priceTicketDom.value}</p>
+  <p>${e2a(`${priceTicketDom.value}`)}</p>
 </div>
 <div class="printSectionFour">
-  <p>${numberFlyDom.value}</p>
-  <p>${numberChairDom.value}</p>
-  <p>${dateTravelDom.value}</p>
-  <p>${dateExistDom.value}</p>
+  <p>${e2a(`${numberFlyDom.value}`)}</p>
+  <p>${e2a(`${numberChairDom.value}`)}</p>
+  <p>${e2a(`${dateTravelDom.value}`)}</p>
+  <p>${e2a(`${dateExistDom.value}`)}</p>
 </div>
 <div class="printSectionFive">
-  <p>${numberTicketDom.value}</p>
-  <p>${nameDom.value}</p>
+  <p>${e2a(`${numberTicketDom.value}`)}</p>
+  <p>${e2a(`${nameDom.value}`)}</p>
   <div class="splitBox">
-    <p>${numberFlyDom.value}</p>
-    <p>${numberChairDom.value}</p>
+    <p>${e2a(`${numberFlyDom.value}`)}</p>
+    <p>${e2a(`${numberChairDom.value}`)}</p>
   </div>
-  <p>${dateTravelDom.value}</p>
-  <p>${dateTicketDom.value}</p>
+  <p>${e2a(`${dateTravelDom.value}`)}</p>
+  <p>${e2a(`${dateTicketDom.value}`)}</p>
 </div>`;
 
-  //   console.log("formValue", formValue);
   wrapper.innerHTML = print;
   resultDom.appendChild(wrapper);
   formBoxDom.style.display = "none";
